@@ -6,7 +6,7 @@
 #
 Name     : pypi-certbot
 Version  : 1.29.0
-Release  : 8
+Release  : 9
 URL      : https://files.pythonhosted.org/packages/da/b8/f0a94c155cb255cbc6306eacb04375d0ffe30e4d7bedd0494c4081b6fa19/certbot-1.29.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/da/b8/f0a94c155cb255cbc6306eacb04375d0ffe30e4d7bedd0494c4081b6fa19/certbot-1.29.0.tar.gz
 Source1  : https://files.pythonhosted.org/packages/da/b8/f0a94c155cb255cbc6306eacb04375d0ffe30e4d7bedd0494c4081b6fa19/certbot-1.29.0.tar.gz.asc
