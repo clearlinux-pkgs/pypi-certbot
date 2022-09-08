@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x447BF683AA3B26C3 (certbot-team@eff.org)
 #
 Name     : pypi-certbot
-Version  : 1.29.0
-Release  : 9
-URL      : https://files.pythonhosted.org/packages/da/b8/f0a94c155cb255cbc6306eacb04375d0ffe30e4d7bedd0494c4081b6fa19/certbot-1.29.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/da/b8/f0a94c155cb255cbc6306eacb04375d0ffe30e4d7bedd0494c4081b6fa19/certbot-1.29.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/da/b8/f0a94c155cb255cbc6306eacb04375d0ffe30e4d7bedd0494c4081b6fa19/certbot-1.29.0.tar.gz.asc
+Version  : 1.30.0
+Release  : 10
+URL      : https://files.pythonhosted.org/packages/c1/63/a8d7173cc3eda0f02661cbccc106fc21f92948e5bc55e1a33a6784f4b886/certbot-1.30.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/c1/63/a8d7173cc3eda0f02661cbccc106fc21f92948e5bc55e1a33a6784f4b886/certbot-1.30.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/c1/63/a8d7173cc3eda0f02661cbccc106fc21f92948e5bc55e1a33a6784f4b886/certbot-1.30.0.tar.gz.asc
 Summary  : ACME client
 Group    : Development/Tools
 License  : Apache-2.0
@@ -85,10 +85,10 @@ python3 components for the pypi-certbot package.
 
 
 %prep
-%setup -q -n certbot-1.29.0
-cd %{_builddir}/certbot-1.29.0
+%setup -q -n certbot-1.30.0
+cd %{_builddir}/certbot-1.30.0
 pushd ..
-cp -a certbot-1.29.0 buildavx2
+cp -a certbot-1.30.0 buildavx2
 popd
 
 %build
@@ -96,7 +96,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1657150141
+export SOURCE_DATE_EPOCH=1662599805
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -121,7 +121,7 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-certbot
-cp %{_builddir}/certbot-1.29.0/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-certbot/4bdc361ecc9ed00f502ec709aabdf54cc856b5cb
+cp %{_builddir}/certbot-%{version}/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-certbot/4bdc361ecc9ed00f502ec709aabdf54cc856b5cb || :
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
