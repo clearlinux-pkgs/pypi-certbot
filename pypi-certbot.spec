@@ -4,7 +4,7 @@
 #
 Name     : pypi-certbot
 Version  : 1.32.0
-Release  : 16
+Release  : 17
 URL      : https://files.pythonhosted.org/packages/80/05/b67d31d2e339023be8e23133cf0de6c3a1389fa440a822872be219370cac/certbot-1.32.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/80/05/b67d31d2e339023be8e23133cf0de6c3a1389fa440a822872be219370cac/certbot-1.32.0.tar.gz
 Summary  : ACME client
