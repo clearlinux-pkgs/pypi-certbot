@@ -6,7 +6,7 @@
 #
 Name     : pypi-certbot
 Version  : 2.0.0
-Release  : 18
+Release  : 19
 URL      : https://files.pythonhosted.org/packages/09/df/955c86b860b5da2a63a34e27326958a8864e68be141bac9136ae2822b93e/certbot-2.0.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/09/df/955c86b860b5da2a63a34e27326958a8864e68be141bac9136ae2822b93e/certbot-2.0.0.tar.gz
 Source1  : https://files.pythonhosted.org/packages/09/df/955c86b860b5da2a63a34e27326958a8864e68be141bac9136ae2822b93e/certbot-2.0.0.tar.gz.asc
@@ -29,6 +29,9 @@ BuildRequires : pypi(pyrfc3339)
 BuildRequires : pypi(pytz)
 BuildRequires : pypi(pywin32)
 BuildRequires : pypi(setuptools)
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 Certbot is part of EFF’s effort to encrypt the entire Internet. Secure communication over the Web relies on HTTPS, which requires the use of a digital certificate that lets browsers verify the identity of web servers (e.g., is that really google.com?). Web servers obtain their certificates from trusted third parties called certificate authorities (CAs). Certbot is an easy-to-use client that fetches a certificate from Let’s Encrypt—an open certificate authority launched by the EFF, Mozilla, and others—and deploys it to a web server.
@@ -92,15 +95,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1669131579
+export SOURCE_DATE_EPOCH=1672261875
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
