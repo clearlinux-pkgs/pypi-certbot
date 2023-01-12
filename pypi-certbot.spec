@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x780CC99432A28621 (certbot-team@eff.org)
 #
 Name     : pypi-certbot
-Version  : 2.1.0
-Release  : 21
-URL      : https://files.pythonhosted.org/packages/25/92/9c48e2e9ad7f31d29c71b5b087cd97bfbaf1891f1ae2a88f8e99a930a40c/certbot-2.1.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/25/92/9c48e2e9ad7f31d29c71b5b087cd97bfbaf1891f1ae2a88f8e99a930a40c/certbot-2.1.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/25/92/9c48e2e9ad7f31d29c71b5b087cd97bfbaf1891f1ae2a88f8e99a930a40c/certbot-2.1.0.tar.gz.asc
+Version  : 2.2.0
+Release  : 22
+URL      : https://files.pythonhosted.org/packages/ea/2a/c84869ed98f10adace2f9ff026425104e26078c7339e8c8e751f5ae7790f/certbot-2.2.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ea/2a/c84869ed98f10adace2f9ff026425104e26078c7339e8c8e751f5ae7790f/certbot-2.2.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/ea/2a/c84869ed98f10adace2f9ff026425104e26078c7339e8c8e751f5ae7790f/certbot-2.2.0.tar.gz.asc
 Summary  : ACME client
 Group    : Development/Tools
 License  : Apache-2.0
@@ -84,10 +84,10 @@ python3 components for the pypi-certbot package.
 
 
 %prep
-%setup -q -n certbot-2.1.0
-cd %{_builddir}/certbot-2.1.0
+%setup -q -n certbot-2.2.0
+cd %{_builddir}/certbot-2.2.0
 pushd ..
-cp -a certbot-2.1.0 buildavx2
+cp -a certbot-2.2.0 buildavx2
 popd
 
 %build
@@ -95,7 +95,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1672761212
+export SOURCE_DATE_EPOCH=1673537611
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
