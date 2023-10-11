@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-certbot
-Version  : 2.7.0
-Release  : 28
-URL      : https://files.pythonhosted.org/packages/0a/22/72343a33d64b73f75e5be06c4ec0c9f168552640cc2e934ea8d87bbcd39e/certbot-2.7.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/0a/22/72343a33d64b73f75e5be06c4ec0c9f168552640cc2e934ea8d87bbcd39e/certbot-2.7.0.tar.gz
+Version  : 2.7.1
+Release  : 29
+URL      : https://files.pythonhosted.org/packages/fb/da/1124407c79ae88b6eec56dcd057f08c1ebc6fbcd4c98d046ea24ccfbd2c5/certbot-2.7.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/fb/da/1124407c79ae88b6eec56dcd057f08c1ebc6fbcd4c98d046ea24ccfbd2c5/certbot-2.7.1.tar.gz
 Summary  : ACME client
 Group    : Development/Tools
 License  : Apache-2.0
@@ -88,10 +88,10 @@ python3 components for the pypi-certbot package.
 
 
 %prep
-%setup -q -n certbot-2.7.0
-cd %{_builddir}/certbot-2.7.0
+%setup -q -n certbot-2.7.1
+cd %{_builddir}/certbot-2.7.1
 pushd ..
-cp -a certbot-2.7.0 buildavx2
+cp -a certbot-2.7.1 buildavx2
 popd
 
 %build
@@ -99,7 +99,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1696430251
+export SOURCE_DATE_EPOCH=1697036013
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
