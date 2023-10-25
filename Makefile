@@ -1,5 +1,5 @@
 PKG_NAME := pypi-certbot
-URL = https://files.pythonhosted.org/packages/d8/65/0a84f55afd6e245519f708f83cd43433bbe26986500cc6bdf6e309fd988e/certbot-2.7.2.tar.gz
+URL = https://files.pythonhosted.org/packages/16/8d/c4e226ef3fc95b478e4895837818c3fb54bfd91caf7366a31fa0f75b88a9/certbot-2.7.3.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
