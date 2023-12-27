@@ -7,7 +7,7 @@
 #
 Name     : pypi-certbot
 Version  : 2.8.0
-Release  : 35
+Release  : 36
 URL      : https://files.pythonhosted.org/packages/f7/e3/6e20eb27fca5fc4e95d43a53f96d5e8f72565983f9acd64b840c09c3777f/certbot-2.8.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f7/e3/6e20eb27fca5fc4e95d43a53f96d5e8f72565983f9acd64b840c09c3777f/certbot-2.8.0.tar.gz
 Summary  : ACME client
