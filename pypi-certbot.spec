@@ -6,10 +6,10 @@
 # autospec commit: 65cf152
 #
 Name     : pypi-certbot
-Version  : 4.1.0
-Release  : 48
-URL      : https://files.pythonhosted.org/packages/2a/2b/906dc5af6f30d5e10195f5209d426eb32fb372496bcf0bb300f6ae5c738d/certbot-4.1.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/2a/2b/906dc5af6f30d5e10195f5209d426eb32fb372496bcf0bb300f6ae5c738d/certbot-4.1.0.tar.gz
+Version  : 4.1.1
+Release  : 49
+URL      : https://files.pythonhosted.org/packages/de/d7/6dbaabb3dd61a3a86cad455c65befa7512f1f8c60231f99ed1f2b576770f/certbot-4.1.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/de/d7/6dbaabb3dd61a3a86cad455c65befa7512f1f8c60231f99ed1f2b576770f/certbot-4.1.1.tar.gz
 Summary  : ACME client
 Group    : Development/Tools
 License  : Apache-2.0
@@ -85,10 +85,10 @@ python3 components for the pypi-certbot package.
 
 
 %prep
-%setup -q -n certbot-4.1.0
-cd %{_builddir}/certbot-4.1.0
+%setup -q -n certbot-4.1.1
+cd %{_builddir}/certbot-4.1.1
 pushd ..
-cp -a certbot-4.1.0 buildavx2
+cp -a certbot-4.1.1 buildavx2
 popd
 
 %build
@@ -96,7 +96,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1749653781
+export SOURCE_DATE_EPOCH=1749769424
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
